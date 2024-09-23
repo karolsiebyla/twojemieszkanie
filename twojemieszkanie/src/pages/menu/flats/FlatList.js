@@ -44,11 +44,32 @@ export default function FlatList() {
         setRecords(flats.filter(f => f.location.toLowerCase().includes(event.target.value.toLowerCase()
         
     )));
-    
 }
 
-    const sortByPrice = () => {
+    const sortByPriceLow = () => {
         const sorted = [...records].sort((a, b) => a.price - b.price);
+        setRecords(sorted);
+    }
+    const sortByPriceHigh = () => {
+        const sorted = [...records].sort((a, b) => b.price - a.price);
+        setRecords(sorted);
+    }
+
+    const sortByStandardLow = () => {
+        const sorted = [...records].sort((a, b) => b.standard - a.standard);
+        setRecords(sorted);
+    }
+    const sortByStandardHigh = () => {
+        const sorted = [...records].sort((a, b) => a.standard - b.standard);
+        setRecords(sorted);
+    }
+
+    const sortByYearNewest = () => {
+        const sorted = [...records].sort((a, b) => b.year - a.year);
+        setRecords(sorted);
+    }
+    const sortByYearOldest = () => {
+        const sorted = [...records].sort((a, b) => a.year - b.year);
         setRecords(sorted);
     }
 
@@ -56,10 +77,7 @@ export default function FlatList() {
         <div className="container my-4">
             <h2 className="text-center mb-4">Oferty mieszkań</h2>
 
-            <input type="text" placeholder="wyszukaj Twoje Miasto/miejscowość" className="form-control" onChange={Filter} />
-            
-
-            <div className="row mb=3">
+            <div className="row mb-3">
                 <div className="col">
                     <Link className="btn btn-primary me-1" to="/menu/flats/create" role="button">Dodaj mieszkanie</Link>
                     <button type="button" className="btn btn-outline-primary"
@@ -70,8 +88,39 @@ export default function FlatList() {
                 </div>
             </div>
 
-            <div className="col">
-                <button type="button" className="btn btn-outline-secondary me-1" onClick={sortByPrice}>Sortuj wg ceny</button>
+            <input type="text" placeholder="wyszukaj Twoje Miasto/miejscowość" className="form-control" onChange={Filter} />
+
+            <div className="d-flex justify-content-around my-3 ">
+
+                <div className="col">
+                    <div className="col mb-2">
+                        <button type="button" className="btn btn-outline-secondary me-1" onClick={sortByPriceLow}>Sortuj wg ceny od najmniejszej</button>
+                    </div>
+
+                    <div className="col">
+                        <button type="button" className="btn btn-outline-secondary me-1" onClick={sortByPriceHigh}>Sortuj wg ceny od największszej</button>
+                    </div>
+                </div>
+
+                <div className="col">
+                    <div className="col mb-2">
+                        <button type="button" className="btn btn-outline-secondary me-1" onClick={sortByStandardLow}>Sortuj wg standardu od najniższego</button>
+                    </div>
+
+                    <div className="col">
+                        <button type="button" className="btn btn-outline-secondary me-1" onClick={sortByStandardHigh}>Sortuj wg standardu od najwyższego</button>
+                    </div>
+                </div>
+
+                <div className="col">
+                    <div className="col mb-2">
+                        <button type="button" className="btn btn-outline-secondary me-1" onClick={sortByYearNewest}>Sortuj wg roku oddania od najnowszych</button>
+                    </div>
+
+                    <div className="col">
+                        <button type="button" className="btn btn-outline-secondary me-1" onClick={sortByYearOldest}>Sortuj wg roku oddania od najstarszych</button>
+                    </div>
+                </div>
 
             </div>
 
@@ -113,5 +162,6 @@ export default function FlatList() {
             </table>
 
         </div>
+        
     )
 }

@@ -1,0 +1,19 @@
+*{
+    text-align: center;
+}
+.container{
+    margin-top: 100px;
+}
+.input_space{
+    margin-bottom: 10px;
+}
+input{
+    height: 35px;
+    width: 25%;
+    font-size: 15px;
+}
+.button{
+    height: 35px;
+    width: 20%;
+    background-color: grey;
+}
