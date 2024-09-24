@@ -1,8 +1,13 @@
-*{
+/* *{
     text-align: center;
-}
+} */
 .container{
     margin-top: 100px;
+    
+}
+
+.containerLogin, .containerLogout{
+    text-align: center;
 }
 .input_space{
     margin-bottom: 10px;
@@ -16,4 +21,18 @@ input{
     height: 35px;
     width: 20%;
     background-color: grey;
+}
+.logout{
+    width: 200px;
+    margin-right: 10px;
+    color: white;   
+    font-weight: 500;
+    background-color: rgb(49, 49, 227);
+}
+.delete{
+    width: 200px;
+    margin-right: 10px;
+    color: white;
+    font-weight: 500;
+    background-color: rgb(218, 72, 32);
 }

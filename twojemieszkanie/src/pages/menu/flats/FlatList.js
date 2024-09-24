@@ -3,7 +3,14 @@ import {useEffect, useState} from "react";
 
 export default function FlatList() {
     const [flats, setFlats] = useState([])
-    const[records, setRecords] = useState([])
+    const [records, setRecords] = useState([])
+    const [favorites, setFavorites] = useState([])
+
+    useEffect(() => {
+        getFlats();
+        const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+        setFavorites(savedFavorites);
+    }, []);
 
     function getFlats() {
         fetch("http://localhost:4000/flats")
@@ -73,6 +80,17 @@ export default function FlatList() {
         setRecords(sorted);
     }
 
+    const toogleFavorite = (flat) => {
+        let updatedFavorites;
+        if (favorites.includes(flat.id)) {
+            updatedFavorites = favorites.filter(fav => fav!== flat.id);
+        } else {
+            updatedFavorites = [...favorites, flat.id]
+        }
+        setFavorites(updatedFavorites);
+        localStorage.setItem("favorites", JSON.stringify(updatedFavorites))
+    }
+
     return (
         <div className="container my-4">
             <h2 className="text-center mb-4">Oferty mieszkań</h2>
@@ -134,6 +152,7 @@ export default function FlatList() {
                         <th>Rok oddania do użytku</th>
                         <th>Zdjęcie</th>
                         <th>Edycja/Usunięcie</th>
+                        <th>Ulubione</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -153,6 +172,9 @@ export default function FlatList() {
                                     to={"/menu/flats/edit/" + flat.id}>Edytuj</Link>
                                     <button type="button" className="btn btn-danger btn-sm"
                                     onClick={() => deleteFlat(flat.id)}>Usuń</button>
+                                </td>
+                                <td>
+                                    <button className="btn btn-outline-primary ms-2" onClick={() => toogleFavorite(flat)}>{favorites.includes(flat.id) ? "Usuń z ulubionych" : "Dodaj do ulubionych"}</button>
                                 </td>
                             </tr>
                         )

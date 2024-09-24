@@ -4,7 +4,10 @@ export default function Home() {
     return (
     
         <>
+        <div className="container my-4">
         <PageButton buttonText="Przejdż do oferty mieszkań" navigateTo="/menu/flats"/>
+        </div>
+        <div className="container my-4">
         <h2>Jak wybrać idealny lokal mieszkalny: porady dla kupujących M2, M3 i M4</h2>
                     <div>
                         <p>
@@ -26,7 +29,11 @@ export default function Home() {
                             Źródło: https://praktyczna-wiedza.pl/nieruchomosci/czym-jest-lokal-mieszkaniowy-i-co-oznaczaja-skroty-m2-m3-m4/
                         </p>
                     </div>
+                    </div>
+                    <div className="container my-4">
                     <PageButton buttonText="Przejdż do oferty mieszkań" navigateTo="/menu/flats"/>
+                    </div>
                     </>
+        
     )
 }

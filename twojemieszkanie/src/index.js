@@ -9,6 +9,7 @@ import FlatList from './pages/menu/flats/FlatList';
 import CreateFlat from './pages/menu/flats/CreateFlat';
 import EditFlat from './pages/menu/flats/EditFlat';
 import SignUpSignIn from './pages/menu/profile/SignUpSignIn';
+import SupportFileForm from './pages/menu/profile/SupportFileForm';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/menu/flats/create" element={<CreateFlat />}/>
         <Route path="/menu/flats/edit/:id" element={<EditFlat />}/>
         <Route path="/menu/profile" element={<SignUpSignIn/>} />
+        <Route path="/logout" element={<SupportFileForm/>} />
         <Route path="*" element={<NotFound />}/>
       </Routes>
       <Footer />
