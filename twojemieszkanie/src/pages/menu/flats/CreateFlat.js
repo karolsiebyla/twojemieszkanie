@@ -29,8 +29,8 @@ export default function CreateFlat() {
 
         const formData = new FormData(event.target);
         //const flat = Object.fromEntries(formData.entries())
-        const newId = (isNaN(maxId) ? 1 : maxId + 1).toString(); // Konwertuj ID na string
-        formData.append("id", newId.toString()); // Dodaj ID do FormData
+        const newId = isNaN(maxId) ? 1 : maxId + 1; // Użyj maxId jako liczby
+        formData.append("id", newId); // Dodaj ID do FormData jako liczbę
 
         if (!formData.get("location") || !formData.get("price") || !formData.get("standard") || !formData.get("year") || !formData.get("image").name) {
             alert("Wypełnij wszystkie pola");

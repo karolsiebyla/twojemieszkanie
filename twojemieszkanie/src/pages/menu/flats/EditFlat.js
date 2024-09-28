@@ -49,12 +49,11 @@ export default function EditFlat() {
 
     async function handleSubmit(event) {
         event.preventDefault();
-
+    
         const formData = new FormData(event.target);
-        //const flat = Object.fromEntries(formData.entries())
-        const newId = (maxId + 1).toString(); // Konwertuj ID na string
-        formData.append("id", newId); // Dodaj ID do FormData
-
+        const newId = maxId + 1; // Użyj maxId jako liczby
+        formData.append("id", newId); // Dodaj ID do FormData jako liczbę
+    
         if (!formData.get("location") || !formData.get("price") || !formData.get("standard") || !formData.get("year")) {
             alert("Wypełnij wszystkie pola");
             return;
@@ -129,8 +128,7 @@ export default function EditFlat() {
 
                         <div className="row mb-3">
                             <div className="offset-sm-4 col-sm-8">
-                                <img src={"http://localhost:4000/images" + initialData.imigeFileName}
-                                    width="150" alt="..."/>
+                            <img src={"http://localhost:4000/images/" + initialData.imageFileName} width="150" alt="..." />
                             </div>
                         </div>
 

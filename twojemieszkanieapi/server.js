@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
     }
 })
 
-let nextId = 1;
+
 
 const bodyParser = multer({ storage: storage }).any()
 
@@ -26,7 +26,8 @@ server.use(bodyParser)
 server.post("/flats", (req, res, next) => {
     let date = new Date()
         req.body.createdAt = date.toISOString()
-
+	
+	
     if (req.body.price) {
         req.body.price = Number(req.body.price)
     }
@@ -36,6 +37,12 @@ server.post("/flats", (req, res, next) => {
 	if (req.body.year) {
         req.body.year = Number(req.body.year)
     }
+	
+	if (req.body.id) {
+		req.body.id = Number(req.body.id)
+	} else {
+		req.body.id = nextId++
+	}
 
     let hasErrors = false
     let errors = {}

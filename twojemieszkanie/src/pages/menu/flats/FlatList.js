@@ -13,7 +13,7 @@ export default function FlatList() {
     }, []);
 
     function getFlats() {
-        fetch("http://localhost:4000/flats")
+        fetch("http://localhost:4000/flats?_sort=id&_order=desc")
             .then(response => {
                 if (response.ok) {
                     return response.json()
@@ -22,12 +22,16 @@ export default function FlatList() {
                 throw new Error()
             })
             .then(data => {
-                setFlats(data);
-                setRecords(data);
+                const flatsWithNumericId = data.map(flat => ({
+                    ...flat,
+                    id: Number(flat.id)
+                }));
+                setFlats(flatsWithNumericId);
+                setRecords(flatsWithNumericId);
             })
             .catch(error => {
-                alert("Nie można pobrać danych")
-            })
+                alert("Nie można pobrać danych");
+            });
     }
 
     useEffect((getFlats), []);
@@ -40,6 +44,9 @@ export default function FlatList() {
                 if (!response.ok) {
                     throw new Error()
                 }
+                const updatedFavorites = favorites.filter(fav => fav !== id);
+                setFavorites(updatedFavorites);
+                localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
                 getFlats()
             })
             .catch(error => {
@@ -52,6 +59,15 @@ export default function FlatList() {
         
     )));
 }
+    const sortById = () => {
+        const sorted = [...records].sort((a, b) => a.id - b.id);
+        setRecords(sorted);
+    }
+
+    const sortByIdDesc = () => {
+        const sorted = [...records].sort((a, b) => b.id - a.id);
+        setRecords(sorted);
+    }
 
     const sortByPriceLow = () => {
         const sorted = [...records].sort((a, b) => a.price - b.price);
@@ -106,9 +122,21 @@ export default function FlatList() {
                 </div>
             </div>
 
-            <input type="text" placeholder="wyszukaj Twoje Miasto/miejscowość" className="form-control" onChange={Filter} />
+            <input type="text" placeholder="wyszukaj Twoje Miasto/Miejscowość" className="form-control" onChange={Filter} />
 
             <div className="d-flex justify-content-around my-3 ">
+
+                
+
+                <div className="col">
+                    <div className="col mb-2">
+                        <button type="button" className="btn btn-outline-secondary me-1" onClick={sortById}>Sortuj wg ID rosnąco</button>
+                    </div>
+
+                    <div className="col">
+                        <button type="button" className="btn btn-outline-secondary me-1" onClick={sortByIdDesc}>Sortuj wg ID malejąco</button>
+                    </div>
+                </div>
 
                 <div className="col">
                     <div className="col mb-2">
@@ -132,11 +160,11 @@ export default function FlatList() {
 
                 <div className="col">
                     <div className="col mb-2">
-                        <button type="button" className="btn btn-outline-secondary me-1" onClick={sortByYearNewest}>Sortuj wg roku oddania od najnowszych</button>
+                        <button type="button" className="btn btn-outline-secondary me-1" onClick={sortByYearNewest}>Sortuj wg roku oddania (najnowsze)</button>
                     </div>
 
                     <div className="col">
-                        <button type="button" className="btn btn-outline-secondary me-1" onClick={sortByYearOldest}>Sortuj wg roku oddania od najstarszych</button>
+                        <button type="button" className="btn btn-outline-secondary me-1" onClick={sortByYearOldest}>Sortuj wg roku oddania (najstarsze)</button>
                     </div>
                 </div>
 
@@ -146,7 +174,7 @@ export default function FlatList() {
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Miasto/miejscowość</th>
+                        <th>Miasto/Miejscowość</th>
                         <th>Cena w tys.</th>
                         <th>Standard</th>
                         <th>Rok oddania do użytku</th>
@@ -171,7 +199,11 @@ export default function FlatList() {
                                     <Link className="btn btn-primary btn-sm me-1"
                                     to={"/menu/flats/edit/" + flat.id}>Edytuj</Link>
                                     <button type="button" className="btn btn-danger btn-sm"
-                                    onClick={() => deleteFlat(flat.id)}>Usuń</button>
+                                    onClick={() => {
+                                    if(window.confirm("Czy na pewno chcesz usunąć mieszkanie?")){
+                                    deleteFlat(flat.id);
+                                    }
+                                    }}>Usuń</button>
                                 </td>
                                 <td>
                                     <button className="btn btn-outline-primary ms-2" onClick={() => toogleFavorite(flat)}>{favorites.includes(flat.id) ? "Usuń z ulubionych" : "Dodaj do ulubionych"}</button>

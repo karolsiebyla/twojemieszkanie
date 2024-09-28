@@ -5,15 +5,15 @@
       "location": "Warszawa",
       "price": "1001",
       "standard": "1",
-      "year": "2019",
+      "year": "2020",
       "imageFileName": "pexels-photo-1454805.webp"
     },
     {
       "id": "2",
       "location": "Gdańsk",
-      "price": "414",
+      "price": "314",
       "standard": "5",
-      "year": "2017",
+      "year": "2021",
       "imageFileName": "1726325669515_przytulny-salon-nowoczesnego-mieszkania_181624-58445.avif"
     },
     {
@@ -33,200 +33,175 @@
       "imageFileName": "pexels-photo-1454805.webp"
     },
     {
-      "id": "5",
-      "location": "Warszawa",
-      "price": "500",
-      "standard": "2",
-      "year": "2021",
-      "imageFileName": "1725787536045_przytulny-salon-nowoczesnego-mieszkania_181624-58445.avif"
-    },
-    {
-      "id": "6",
-      "location": "Gdansk",
-      "price": "500",
-      "standard": "3",
-      "year": "2023",
-      "imageFileName": "1725787527986_przytulna-jadalnia-nowoczesnego-apartamentu_181624-61506.avif"
-    },
-    {
-      "id": "7",
-      "location": "Poznan",
-      "price": "300",
-      "standard": "2",
-      "year": "2024",
-      "imageFileName": "1725787516234_3d-rendering-loft-luksusowy-zywy-pokoj-z-polka-na-ksiazki_105762-2104.avif"
-    },
-    {
-      "id": "8",
-      "location": "Warszawa",
-      "price": "803",
-      "standard": "1",
-      "year": "2021",
-      "imageFileName": "pexels-photo-1454805.webp"
-    },
-    {
-      "location": "Gdańsk",
-      "price": "900",
-      "standard": "1",
-      "year": "2023",
-      "imageFileName": "1726076272548_przytulny-salon-nowoczesnego-mieszkania_181624-58445.avif",
-      "id": "9"
+      "location": "Kraków",
+      "price": 900,
+      "standard": 5,
+      "year": 1999,
+      "imageFileName": "1727371869576_przytulny-salon-nowoczesnego-mieszkania_181624-58445.avif",
+      "id": 5,
+      "createdAt": "2024-09-26T17:31:09.581Z"
     },
     {
       "location": "Kraków",
-      "price": "900",
-      "standard": "1",
-      "year": "1999",
-      "imageFileName": "1726076304203_przytulny-salon-nowoczesnego-mieszkania_181624-58445.avif",
-      "id": "10"
-    },
-    {
-      "location": "Gdańsk",
-      "price": "800",
-      "standard": "5",
-      "year": "1999",
-      "imageFileName": "1726076329176_przytulna-jadalnia-nowoczesnego-apartamentu_181624-61506.avif",
-      "id": "11"
-    },
-    {
-      "location": "Kraków",
-      "price": "900",
-      "standard": "5",
-      "year": "2017",
-      "imageFileName": "1726077435762_przytulna-jadalnia-nowoczesnego-apartamentu_181624-61506.avif",
-      "id": "12"
-    },
-    {
-      "location": "Kraków",
-      "price": "900",
-      "standard": "2",
-      "year": "2023",
-      "imageFileName": "1726077570690_3d-rendering-loft-luksusowy-zywy-pokoj-z-polka-na-ksiazki_105762-2104.avif",
-      "id": "13"
-    },
-    {
-      "location": "Gdańsk",
-      "price": "800",
-      "standard": "1",
-      "year": "2023",
-      "imageFileName": "1726077588626_przytulny-salon-nowoczesnego-mieszkania_181624-58445.avif",
-      "id": "14"
-    },
-    {
-      "location": "Kraków",
-      "price": "903",
-      "standard": "1",
-      "year": "2024",
-      "imageFileName": "1726156124338_3d-rendering-loft-luksusowy-zywy-pokoj-z-polka-na-ksiazki_105762-2104.avif",
-      "id": "15"
-    },
-    {
-      "location": "Kraków",
-      "price": "800",
-      "standard": "1",
-      "year": "2023",
-      "imageFileName": "1726318196263_przytulna-jadalnia-nowoczesnego-apartamentu_181624-61506.avif",
-      "id": "16",
-      "createdAt": "2024-09-14T12:49:56.269Z"
+      "price": 800,
+      "standard": 2,
+      "year": 2017,
+      "imageFileName": "1727371899398_przytulna-jadalnia-nowoczesnego-apartamentu_181624-61506.avif",
+      "id": 6,
+      "createdAt": "2024-09-26T17:31:39.400Z"
     },
     {
       "location": "Poznań",
-      "price": "900",
-      "standard": "1",
-      "year": "2023",
-      "imageFileName": "1726318658896_3d-rendering-loft-luksusowy-zywy-pokoj-z-polka-na-ksiazki_105762-2104.avif",
-      "id": "17",
-      "createdAt": "2024-09-14T12:57:38.900Z"
+      "price": 900,
+      "standard": 5,
+      "year": 2019,
+      "imageFileName": "1727371914594_przytulna-jadalnia-nowoczesnego-apartamentu_181624-61506.avif",
+      "id": 7,
+      "createdAt": "2024-09-26T17:31:54.596Z"
+    },
+    {
+      "location": "Poznań",
+      "price": 900,
+      "standard": 2,
+      "year": 2017,
+      "imageFileName": "1727371934077_przytulna-jadalnia-nowoczesnego-apartamentu_181624-61506.avif",
+      "id": 8,
+      "createdAt": "2024-09-26T17:32:14.079Z"
     },
     {
       "location": "Gdańsk",
       "price": 900,
       "standard": 5,
       "year": 1999,
-      "imageFileName": "1726318877703_3d-rendering-loft-luksusowy-zywy-pokoj-z-polka-na-ksiazki_105762-2104.avif",
-      "id": "18",
-      "createdAt": "2024-09-14T13:01:17.704Z"
-    },
-    {
-      "location": "Gdańsk",
-      "price": "800",
-      "standard": "2",
-      "year": "2019",
-      "imageFileName": "1726318903956_przytulna-jadalnia-nowoczesnego-apartamentu_181624-61506.avif",
-      "id": "19",
-      "createdAt": "2024-09-14T13:01:43.957Z"
-    },
-    {
-      "location": "Warszawa",
-      "price": 900,
-      "standard": 1,
-      "year": 2020,
-      "imageFileName": "1726319383833_przytulny-salon-nowoczesnego-mieszkania_181624-58445.avif",
-      "id": "20",
-      "createdAt": "2024-09-14T13:09:43.839Z"
+      "imageFileName": "1727371952541_przytulna-jadalnia-nowoczesnego-apartamentu_181624-61506.avif",
+      "id": 9,
+      "createdAt": "2024-09-26T17:32:32.543Z"
     },
     {
       "location": "Warszawa",
       "price": 800,
-      "standard": 1,
-      "year": 2023,
-      "imageFileName": "1726320141618_przytulny-salon-nowoczesnego-mieszkania_181624-58445.avif",
-      "id": "21",
-      "createdAt": "2024-09-14T13:22:21.620Z"
+      "standard": 2,
+      "year": 1999,
+      "imageFileName": "1727371966145_przytulny-salon-nowoczesnego-mieszkania_181624-58445.avif",
+      "id": 10,
+      "createdAt": "2024-09-26T17:32:46.147Z"
+    },
+    {
+      "location": "Warszawa",
+      "price": 800,
+      "standard": 5,
+      "year": 1999,
+      "imageFileName": "1727371981277_przytulny-salon-nowoczesnego-mieszkania_181624-58445.avif",
+      "id": 11,
+      "createdAt": "2024-09-26T17:33:01.279Z"
+    },
+    {
+      "location": "Kraków",
+      "price": 900,
+      "standard": 5,
+      "year": 1999,
+      "imageFileName": "1727372063142_przytulny-salon-nowoczesnego-mieszkania_181624-58445.avif",
+      "id": 12,
+      "createdAt": "2024-09-26T17:34:23.146Z"
+    },
+    {
+      "location": "Kraków",
+      "price": 900,
+      "standard": 2,
+      "year": 2017,
+      "imageFileName": "1727372087737_przytulny-salon-nowoczesnego-mieszkania_181624-58445.avif",
+      "id": 13,
+      "createdAt": "2024-09-26T17:34:47.738Z"
     },
     {
       "location": "Warszawa",
       "price": 800,
       "standard": 2,
       "year": 2019,
-      "imageFileName": "1726328414864_przytulna-jadalnia-nowoczesnego-apartamentu_181624-61506.avif",
-      "id": "22",
-      "createdAt": "2024-09-14T15:40:14.865Z"
-    },
-    {
-      "location": "Gdańsk",
-      "price": 900,
-      "standard": 1,
-      "year": 1999,
-      "imageFileName": "1726328435894_przytulny-salon-nowoczesnego-mieszkania_181624-58445.avif",
-      "id": "23",
-      "createdAt": "2024-09-14T15:40:35.897Z"
-    },
-    {
-      "location": "Poznań",
-      "price": 900,
-      "standard": 5,
-      "year": 2018,
-      "imageFileName": "1726328459414_3d-rendering-loft-luksusowy-zywy-pokoj-z-polka-na-ksiazki_105762-2104.avif",
-      "id": "24",
-      "createdAt": "2024-09-14T15:40:59.415Z"
+      "imageFileName": "1727372102605_przytulny-salon-nowoczesnego-mieszkania_181624-58445.avif",
+      "id": 14,
+      "createdAt": "2024-09-26T17:35:02.606Z"
     },
     {
       "location": "Gdańsk",
       "price": 900,
       "standard": 2,
-      "year": 2023,
-      "imageFileName": "1726328483880_przytulna-jadalnia-nowoczesnego-apartamentu_181624-61506.avif",
-      "id": "25",
-      "createdAt": "2024-09-14T15:41:23.881Z"
+      "year": 1999,
+      "imageFileName": "1727372117331_przytulna-jadalnia-nowoczesnego-apartamentu_181624-61506.avif",
+      "id": 15,
+      "createdAt": "2024-09-26T17:35:17.332Z"
     },
     {
-      "location": "Poznań",
+      "location": "Kraków",
       "price": 900,
-      "standard": 5,
+      "standard": 2,
+      "year": 1999,
+      "imageFileName": "1727372259502_przytulny-salon-nowoczesnego-mieszkania_181624-58445.avif",
+      "id": 16,
+      "createdAt": "2024-09-26T17:37:39.504Z"
+    },
+    {
+      "location": "Kraków",
+      "price": 800,
+      "standard": 2,
       "year": 2017,
-      "imageFileName": "1726328573776_3d-rendering-loft-luksusowy-zywy-pokoj-z-polka-na-ksiazki_105762-2104.avif",
-      "id": "26",
-      "createdAt": "2024-09-14T15:42:53.778Z"
+      "imageFileName": "1727372274289_przytulna-jadalnia-nowoczesnego-apartamentu_181624-61506.avif",
+      "id": 17,
+      "createdAt": "2024-09-26T17:37:54.290Z"
+    },
+    {
+      "location": "Gdańsk",
+      "price": 800,
+      "standard": 2,
+      "year": 2019,
+      "imageFileName": "1727372290799_przytulna-jadalnia-nowoczesnego-apartamentu_181624-61506.avif",
+      "id": 18,
+      "createdAt": "2024-09-26T17:38:10.801Z"
+    },
+    {
+      "location": "Warszawa",
+      "price": 800,
+      "standard": 2,
+      "year": 2019,
+      "imageFileName": "1727372305021_przytulny-salon-nowoczesnego-mieszkania_181624-58445.avif",
+      "id": 19,
+      "createdAt": "2024-09-26T17:38:25.022Z"
+    },
+    {
+      "location": "Warszawa",
+      "price": 800,
+      "standard": 2,
+      "year": 1999,
+      "imageFileName": "1727372318687_przytulny-salon-nowoczesnego-mieszkania_181624-58445.avif",
+      "id": 20,
+      "createdAt": "2024-09-26T17:38:38.688Z"
+    },
+    {
+      "location": "Warszawa",
+      "price": "800",
+      "standard": "6",
+      "year": "1999",
+      "imageFileName": "1727373543739_przytulny-salon-nowoczesnego-mieszkania_181624-58445.avif",
+      "id": 21,
+      "createdAt": "2024-09-26T17:38:54.036Z"
     },
     {
       "location": "Warszawa",
       "price": "900",
+      "standard": "2",
+      "year": "2020",
+      "imageFileName": "1727374497485_3d-rendering-loft-luksusowy-zywy-pokoj-z-polka-na-ksiazki_105762-2104.avif",
+      "id": 22,
+      "createdAt": "2024-09-26T18:14:57.487Z"
+    },
+    {
+      "location": "Warszawa",
+      "price": "802",
       "standard": "1",
-      "year": "2019",
-      "imageFileName": "1726329395999_przytulna-jadalnia-nowoczesnego-apartamentu_181624-61506.avif",
-      "id": "27",
-      "createdAt": "2024-09-14T15:56:36.003Z"
+      "year": "2021",
+      "imageFileName": "1727533544756_przytulna-jadalnia-nowoczesnego-apartamentu_181624-61506.avif",
+      "id": 23,
+      "createdAt": "2024-09-26T18:52:09.646Z"
     }
   ]
 }

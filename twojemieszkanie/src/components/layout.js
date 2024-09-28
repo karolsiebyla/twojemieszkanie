@@ -41,10 +41,10 @@ export function Navbar() {
                         {isLoggedIn ? (
                             <>
                                 <li className="nav-item">
-                                    <span className="navbar-text">Witaj, {localStorage.getItem("name")}!</span>
+                                    <span className="navbar-text text-m">Witaj, {localStorage.getItem("name")}!</span>
                                 </li>
                                 <li className="nav-item">
-                                    <button className="btn btn-outline-danger" onClick={handleLogout}>Wyloguj</button>
+                                    <button className="btn btn-outline-danger btn-logout ms-2" onClick={handleLogout}>Wyloguj</button>
                                 </li>
                             </>
                         ) : (
